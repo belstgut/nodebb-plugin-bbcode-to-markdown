@@ -66,8 +66,8 @@ converter.parse = function(postContent, callback) {
 		.replace(/\[url=(https?:[\s\S]*?):[\s\S]*?\]([\s\S]*?)\[\/url:[\s\S]*?\]/gi, '[$2]($1)')
 		.replace(/\[\S?url:[s\S]*?\]/gi, '')
 		.replace(/\[\S?i:[s\S]*?\]/gi, '*')
-		.replace(/\[code2=([\s\S]*?):[\s\S]*?\]([\s\S]*?)\[\/code2:[\s\S]*?\]/gi, '```$1\n$2\n```') // no idea how to prevent
-		.replace(/\[code:[\s\S]*?\]([\s\S]*?)\[\/code:[\s\S]*?\]/gi, '```\n$1\n```') //  parsing inside code tags
+		.replace(/\[code2=([\s\S]*?):[\s\S]*?\]([\s\S]*?)\[\/code2:[\s\S]*?\]/gi, '\n```$1\n$2\n```\n') // no idea how to prevent
+		.replace(/\[code:[\s\S]*?\]([\s\S]*?)\[\/code:[\s\S]*?\]/gi, '\n```\n$1\n```\n') //  parsing inside code tags
 		.replace(/\[quote:[\s\S]*?\]([\s\S]*?)\[\/quote:[\s\S]*?\]/gi, '> $1')
 		.replace(/\[img:[\s\S]*?\]([\s\S]*?)\[\/img:[\s\S]*?\]/gi, '![$1]($1)')
 		.replace(/<!--[\s\S]*?href="([\s\S]*?)"[\s\S]*?>([\s\S]*?)<[\s\S]*?-->/gi, '[$2]($1)');
