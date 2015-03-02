@@ -42,7 +42,7 @@ function parseEmoji(content) {
 		'Neutral'           : ':neutral_face:',
 		'Mr. Green'         : ':alien:',
 		'Geek'              : ':neckbeard:',
-		'Uber Geek'         : ':neackbeard:'
+		'Uber Geek'         : ':neckbeard:'
 	};
 	var smiley, smileyBlock, re = /<!--[\s\S]*?img[\s\S]*?src="{SMILIES_PATH}[\s\S]*?"[\s\S]*?title="([\s\S]*?)"[\s\S]*?>[\s\S]*?-->/gi;
 
